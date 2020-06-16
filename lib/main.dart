@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         'category': (BuildContext context) => CategoryPage(),
         'login': (BuildContext context) => SigInPage(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }

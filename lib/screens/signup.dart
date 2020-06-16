@@ -13,10 +13,6 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Food Dev'),
-        backgroundColor: Colors.orangeAccent,
-      ),
       body: ListView(
         children: <Widget>[
           Column(

@@ -8,6 +8,7 @@ import 'package:food_dev/utilities/constants.dart';
 import 'package:food_dev/utilities/popular_card.dart';
 import 'package:food_dev/utilities/popular_card_content.dart';
 import 'package:food_dev/utilities/round_icon_button.dart';
+import 'package:badges/badges.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,6 +22,20 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Food dev'),
         backgroundColor: Colors.orangeAccent,
+        centerTitle: true,
+        actions: <Widget>[
+          Badge(
+            position: BadgePosition.topRight(top: 0, right: 3),
+            animationDuration: Duration(milliseconds: 300),
+            animationType: BadgeAnimationType.slide,
+            badgeContent: Text(
+              '3',
+              style: TextStyle(color: Colors.white),
+            ),
+            child:
+              IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -53,12 +68,11 @@ class _HomePageState extends State<HomePage> {
               icon: Icons.person,
             ),
             MenuListTitle(
-              title: 'Logout',
-              icon: Icons.exit_to_app,
-              onTap: () {
-                Navigator.pushNamed(context, 'login');
-              }
-            ),
+                title: 'Logout',
+                icon: Icons.exit_to_app,
+                onTap: () {
+                  Navigator.pushNamed(context, 'login');
+                }),
           ],
         ),
       ),

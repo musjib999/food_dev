@@ -15,10 +15,6 @@ class _SigInPageState extends State<SigInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Food Dev'),
-        backgroundColor: Colors.orangeAccent,
-      ),
       body: ListView(
         children: <Widget>[
           Column(
@@ -27,7 +23,7 @@ class _SigInPageState extends State<SigInPage> {
                 width: 110.0,
                 padding: EdgeInsets.all(17.0),
                 margin: EdgeInsets.only(
-                  top: 18.0,
+                  top: 15.0,
                 ),
                 child: Center(
                   child: Image(
@@ -36,7 +32,14 @@ class _SigInPageState extends State<SigInPage> {
                 ),
               ),
               SizedBox(
-                height: 15.0,
+                height: 10.0,
+              ),
+              Text(
+                'Login',
+                style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 5.0,
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
