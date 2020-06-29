@@ -1,16 +1,16 @@
 # food_dev
 
 A new Flutter project.
+A food delievary app made with flutter
 
-## Getting Started
+![Screenshot_20200628-172254](https://user-images.githubusercontent.com/53815937/86004844-c6be7a80-ba0b-11ea-8687-05051eaba652.png)
 
-This project is a starting point for a Flutter application.
+![Screenshot_20200628-172316](https://user-images.githubusercontent.com/53815937/86004852-ca520180-ba0b-11ea-8ab5-d8b4d5428c7a.png)
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot_20200628-172330](https://user-images.githubusercontent.com/53815937/86004862-cde58880-ba0b-11ea-8197-6762f2cb5561.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![Screenshot_20200628-172354](https://user-images.githubusercontent.com/53815937/86004871-d0e07900-ba0b-11ea-98db-60197379af43.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20200628-172408](https://user-images.githubusercontent.com/53815937/86004878-d3db6980-ba0b-11ea-8588-10aee3bbabce.png)
+
+![Screenshot_20200628-172430](https://user-images.githubusercontent.com/53815937/86004888-d6d65a00-ba0b-11ea-8390-8baa3988b4a4.png)
