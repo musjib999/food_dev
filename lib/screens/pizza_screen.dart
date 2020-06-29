@@ -46,24 +46,20 @@ class _PizzaPageState extends State<PizzaPage> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  PizzaCard(
-                    // onPressed: () {
-                    //   Navigator.push(context,
-                    //       MaterialPageRoute(builder: (context) {
-                    //     return ItemPage();
-                    //   }));
-                    // },
-                    imagePath: 'images/pizza.png',
-                  ),
-                  PizzaCard(
-                    imagePath: 'images/pizza1.png',
-                  ),
+                  PizzaCard(imagePath: 'images/pizza.png'),
+                  PizzaCard(imagePath: 'images/pizza1.png'),
                 ],
               ),
               Row(
                 children: <Widget>[
-                  PizzaCard(imagePath: 'images/pizza2.png',),
-                  PizzaCard(imagePath: 'images/pizza.png',),
+                  PizzaCard(imagePath: 'images/pizza2.png'),
+                  PizzaCard(imagePath: 'images/pizza3.png'),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  PizzaCard(imagePath: 'images/pizza4.png'),
+                  PizzaCard(imagePath: 'images/pizza5.png'),
                 ],
               ),
             ],
