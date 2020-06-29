@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:food_dev/screens/cart_screen.dart';
 import 'package:food_dev/utilities/round_icon_button.dart';
 
 class PopularCardContent extends StatelessWidget {
-  PopularCardContent({this.foodImagePath, this.cardTitle, this.starRate});
+  PopularCardContent({this.foodImagePath, this.cardTitle, this.starRate, this.onPressed});
   final String foodImagePath;
   final String cardTitle;
-  final String starRate; 
+  final String starRate;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -40,22 +40,21 @@ class PopularCardContent extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 18.0),
                   child: RoundIconButton(
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                        return CartPage();
-                      }),);
-                    },
-                    icon: Icons.shopping_cart,
+                    onPressed: onPressed,
+                    icon: Icons.add_shopping_cart,
                     fillColor: Colors.orange,
                     width: 46.0,
                     height: 46.0,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top:20.0, left:10.0),
+                  padding: const EdgeInsets.only(top: 20.0, left: 10.0),
                   child: Row(
                     children: <Widget>[
-                      Icon(Icons.star, size: 15.0,),
+                      Icon(
+                        Icons.star,
+                        size: 15.0,
+                      ),
                       Text(starRate),
                     ],
                   ),
@@ -66,7 +65,9 @@ class PopularCardContent extends StatelessWidget {
         ),
         Container(
           width: 100.0,
-          child: Image(image: AssetImage(foodImagePath),),
+          child: Image(
+            image: AssetImage(foodImagePath),
+          ),
         ),
       ],
     );

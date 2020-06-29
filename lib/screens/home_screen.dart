@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_dev/screens/cart_screen.dart';
 import 'package:food_dev/screens/category_screen.dart';
 import 'package:food_dev/utilities/category_card.dart';
 import 'package:food_dev/utilities/card_body.dart';
@@ -9,6 +10,7 @@ import 'package:food_dev/utilities/popular_card.dart';
 import 'package:food_dev/utilities/popular_card_content.dart';
 import 'package:food_dev/utilities/round_icon_button.dart';
 import 'package:badges/badges.dart';
+import 'package:food_dev/utilities/meun_list_title.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,6 +18,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int counter = 2;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,13 +31,19 @@ class _HomePageState extends State<HomePage> {
           Badge(
             position: BadgePosition.topRight(top: 0, right: 3),
             animationDuration: Duration(milliseconds: 300),
-            animationType: BadgeAnimationType.slide,
+            animationType: BadgeAnimationType.scale,
             badgeContent: Text(
-              '3',
+              '$counter',
               style: TextStyle(color: Colors.white),
             ),
-            child:
-              IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {}),
+            child: IconButton(
+              icon: Icon(Icons.shopping_cart),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CartPage();
+                }));
+              }
+            ),
           ),
         ],
       ),
@@ -149,6 +159,9 @@ class _HomePageState extends State<HomePage> {
                             height: 40.0,
                           ),
                           cardTitle: 'Pizza',
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'pizza');
+                          },
                         ),
                       ),
                       CategoryCard(
@@ -186,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                         width: 46.0,
                         height: 46.0,
                         fillColor: Colors.blueGrey,
-                        elevation: 0.6,
+                        elevation: 6.0,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -219,6 +232,11 @@ class _HomePageState extends State<HomePage> {
                     foodImagePath: 'images/pizza.png',
                     cardTitle: 'Primavera Pizza',
                     starRate: '5.0',
+                    onPressed: () {
+                      setState(() {
+                        counter++;
+                      });
+                    },
                   ),
                 ),
                 PopularCard(
@@ -226,6 +244,11 @@ class _HomePageState extends State<HomePage> {
                     foodImagePath: 'images/cake.png',
                     cardTitle: 'Chocolate cake',
                     starRate: '4.9',
+                    onPressed: () {
+                      setState(() {
+                        counter++;
+                      });
+                    },
                   ),
                 ),
                 PopularCard(
@@ -233,6 +256,11 @@ class _HomePageState extends State<HomePage> {
                     foodImagePath: 'images/dish.png',
                     cardTitle: 'biryani dish',
                     starRate: '4.8',
+                    onPressed: () {
+                      setState(() {
+                        counter++;
+                      });
+                    },
                   ),
                 ),
               ],
@@ -240,24 +268,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class MenuListTitle extends StatelessWidget {
-  MenuListTitle({this.title, this.icon, this.onTap});
-  final IconData icon;
-  final String title;
-  final Function onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      trailing: Icon(
-        icon,
-      ),
-      onTap: onTap,
     );
   }
 }

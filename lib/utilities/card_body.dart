@@ -5,9 +5,11 @@ class CardBody extends StatelessWidget {
   CardBody({
     this.icon,
     this.cardTitle,
+    this.onPressed
   });
   final Widget icon;
   final String cardTitle;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class CardBody extends StatelessWidget {
           fillColor: Colors.orange,
           width: 36.0,
           height: 36.0,
+          onPressed: onPressed,
         ),
       ],
     );

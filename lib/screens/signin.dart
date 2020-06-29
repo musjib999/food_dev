@@ -20,10 +20,10 @@ class _SigInPageState extends State<SigInPage> {
           Column(
             children: <Widget>[
               Container(
-                width: 110.0,
+                width: 140.0,
                 padding: EdgeInsets.all(17.0),
                 margin: EdgeInsets.only(
-                  top: 15.0,
+                  top: 9.0,
                 ),
                 child: Center(
                   child: Image(
@@ -32,11 +32,11 @@ class _SigInPageState extends State<SigInPage> {
                 ),
               ),
               SizedBox(
-                height: 10.0,
+                height: 6.0,
               ),
               Text(
                 'Login',
-                style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 43.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 5.0,
