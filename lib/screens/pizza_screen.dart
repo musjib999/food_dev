@@ -46,7 +46,9 @@ class _PizzaPageState extends State<PizzaPage> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  PizzaCard(imagePath: 'images/pizza.png'),
+                  PizzaCard(imagePath: 'images/pizza.png', onPressed: (){
+                    Navigator.pushNamed(context, 'cart');
+                  },),
                   PizzaCard(imagePath: 'images/pizza1.png'),
                 ],
               ),

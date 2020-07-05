@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_dev/utilities/authbutton.dart';
+import 'package:food_dev/utilities/foodbutton.dart';
 
 class ItemPage extends StatefulWidget {
   @override
@@ -147,25 +148,3 @@ class _ItemPageState extends State<ItemPage> {
   }
 }
 
-class FoodSizeButton extends StatelessWidget {
-  FoodSizeButton({this.size});
-  final String size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(18.0),
-      width: 60.0,
-      decoration: BoxDecoration(
-        color: Colors.grey[300],
-        borderRadius: BorderRadius.circular(40.0),
-      ),
-      child: Center(
-        child: Text(
-          size,
-          style: TextStyle(fontSize: 30.0),
-        ),
-      ),
-    );
-  }
-}

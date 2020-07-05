@@ -3,6 +3,7 @@ import 'package:food_dev/screens/category_screen.dart';
 import 'package:food_dev/screens/item_screen.dart';
 import 'package:food_dev/screens/pizza_screen.dart';
 import 'package:food_dev/screens/signin.dart';
+import 'screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         'category': (BuildContext context) => CategoryPage(),
         'login': (BuildContext context) => SigInPage(),
         'pizza': (BuildContext context) => PizzaPage(),
+        'home':(BuildContext context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
     );

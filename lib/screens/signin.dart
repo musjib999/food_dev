@@ -81,6 +81,7 @@ class _SigInPageState extends State<SigInPage> {
                       return HomePage();
                     }),
                   );
+//                    Navigator.pushNamed(context, 'cart');
                 },
                 child: AuthButtons(
                   title: 'LOGIN',
