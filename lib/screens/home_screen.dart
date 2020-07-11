@@ -82,7 +82,8 @@ class _HomePageState extends State<HomePage> {
                 icon: Icons.exit_to_app,
                 onTap: () {
                   Navigator.pushNamed(context, 'login');
-                }),
+                }
+              ),
           ],
         ),
       ),

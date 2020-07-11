@@ -36,9 +36,10 @@ class PopularCardContent extends StatelessWidget {
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(top: 18.0),
+                  padding: const EdgeInsets.only(top: 15.0),
                   child: RoundIconButton(
                     onPressed: onPressed,
                     icon: Icons.add_shopping_cart,
