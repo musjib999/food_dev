@@ -4,6 +4,7 @@ import 'package:food_dev/utilities/authbutton.dart';
 import 'package:food_dev/utilities/foodbutton.dart';
 
 class ItemPage extends StatefulWidget {
+  static const String id = 'items';
   @override
   _ItemPageState createState() => _ItemPageState();
 }

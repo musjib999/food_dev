@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:food_dev/screens/cart_screen.dart';
 import 'package:food_dev/screens/category_screen.dart';
-import 'package:food_dev/screens/item_screen.dart';
 import 'package:food_dev/screens/pizza_screen.dart';
 import 'package:food_dev/screens/signin.dart';
+import 'package:food_dev/screens/signup.dart';
 import 'screens/home_screen.dart';
 
 void main() => runApp(MyApp());
@@ -12,12 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SigInPage(),
+      initialRoute: SigInPage.id,
       routes: <String, WidgetBuilder>{
-        'cart':(BuildContext context) => ItemPage(),
-        'category': (BuildContext context) => CategoryPage(),
-        'login': (BuildContext context) => SigInPage(),
-        'pizza': (BuildContext context) => PizzaPage(),
-        'home':(BuildContext context) => HomePage(),
+        CartPage.id:(BuildContext context) => CartPage(),
+        CategoryPage.id: (BuildContext context) => CategoryPage(),
+        SigInPage.id: (BuildContext context) => SigInPage(),
+        SignUpPage.id: (BuildContext context)=> SignUpPage(),
+        PizzaPage.id: (BuildContext context) => PizzaPage(),
+        HomePage.id:(BuildContext context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
     );

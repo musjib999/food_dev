@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class InputFeild extends StatelessWidget {
-  InputFeild({@required this.hintText, this.secureText, this.prefixIcon, this.suffixIcon});
+  InputFeild({@required this.hintText, this.secureText, this.prefixIcon, this.suffixIcon, @required this.onChanged});
 
   final String hintText;
   final bool secureText;
   final Icon prefixIcon;
   final IconButton suffixIcon;
+  final Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,7 @@ class InputFeild extends StatelessWidget {
         ),
       ),
       obscureText: secureText,
+      onChanged: onChanged,
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_dev/utilities/food_category.dart';
 
-
 class CategoryPage extends StatefulWidget {
+  static const String id = 'category';
   @override
   _CategoryPageState createState() => _CategoryPageState();
 }
@@ -48,10 +48,16 @@ class _CategoryPageState extends State<CategoryPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  FoodCategory(
-                    svgPath: 'images/pizza.svg',
-                    title: 'Pizza',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'pizza');
+                    },
+                    child: FoodCategory(
+                      svgPath: 'images/pizza.svg',
+                      title: 'Pizza',
+                    ),
                   ),
                   FoodCategory(
                     svgPath: 'images/salad.svg',
@@ -67,6 +73,7 @@ class _CategoryPageState extends State<CategoryPage> {
             Padding(
               padding: const EdgeInsets.only(top: 15.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   FoodCategory(
                     svgPath: 'images/french-fries.svg',
@@ -86,6 +93,7 @@ class _CategoryPageState extends State<CategoryPage> {
             Padding(
               padding: const EdgeInsets.only(top: 15.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   FoodCategory(
                     svgPath: 'images/cocktail.svg',
@@ -108,4 +116,3 @@ class _CategoryPageState extends State<CategoryPage> {
     );
   }
 }
-

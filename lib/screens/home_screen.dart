@@ -11,16 +11,38 @@ import 'package:food_dev/utilities/popular_card_content.dart';
 import 'package:food_dev/utilities/round_icon_button.dart';
 import 'package:badges/badges.dart';
 import 'package:food_dev/utilities/meun_list_title.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomePage extends StatefulWidget {
+  static const String id = 'home';
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  final _auth = FirebaseAuth.instance;
+  FirebaseUser loggedInUser;
+
   int counter = 2;
 
   @override
+  void initState() {
+    super.initState();
+    getCurrentUser();
+  }
+
+    void getCurrentUser() async{
+    final user = await _auth.currentUser();
+    try {
+      if (user != null) {
+        loggedInUser = user;
+        loggedInUser.email;
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -37,13 +59,12 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(color: Colors.white),
             ),
             child: IconButton(
-              icon: Icon(Icons.shopping_cart),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return CartPage();
-                }));
-              }
-            ),
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return CartPage();
+                  }));
+                }),
           ),
         ],
       ),
@@ -82,8 +103,7 @@ class _HomePageState extends State<HomePage> {
                 icon: Icons.exit_to_app,
                 onTap: () {
                   Navigator.pushNamed(context, 'login');
-                }
-              ),
+                }),
           ],
         ),
       ),

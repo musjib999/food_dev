@@ -7,6 +7,7 @@ import 'package:food_dev/utilities/inputfield.dart';
 import 'package:food_dev/utilities/round_icon_button.dart';
 
 class SigInPage extends StatefulWidget {
+  static const String id = 'login';
   @override
   _SigInPageState createState() => _SigInPageState();
 }

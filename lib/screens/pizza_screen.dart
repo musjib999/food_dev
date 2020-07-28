@@ -5,6 +5,7 @@ import 'package:food_dev/screens/cart_screen.dart';
 import 'package:food_dev/utilities/pizza_card.dart';
 
 class PizzaPage extends StatefulWidget {
+  static const String id = 'pizza';
   @override
   _PizzaPageState createState() => _PizzaPageState();
 }
