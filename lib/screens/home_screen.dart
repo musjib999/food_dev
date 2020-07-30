@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_dev/screens/cart_screen.dart';
 import 'package:food_dev/screens/category_screen.dart';
+import 'package:food_dev/screens/signin.dart';
 import 'package:food_dev/utilities/category_card.dart';
 import 'package:food_dev/utilities/card_body.dart';
 import 'package:food_dev/utilities/constants.dart';
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
     try {
       if (user != null) {
         loggedInUser = user;
-        loggedInUser.email;
+        print(loggedInUser.email);
       }
     } catch (e) {
       print(e);
@@ -72,8 +73,8 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Mubarak na Mairo'),
-              accountEmail: Text('namairo123@gmail.com'),
+              accountName: Text('Mubarak na Miaro'),
+              accountEmail: Text('namairo@gmail.com'),
               currentAccountPicture: CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/weeknd.jpg'),
@@ -102,7 +103,8 @@ class _HomePageState extends State<HomePage> {
                 title: 'Logout',
                 icon: Icons.exit_to_app,
                 onTap: () {
-                  Navigator.pushNamed(context, 'login');
+                  _auth.signOut();
+                  Navigator.pushNamed(context, SigInPage.id);
                 }),
           ],
         ),
