@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
-  // int counter = 1;
-
+// int counter = 1;
 
 class AddedCartItem extends StatelessWidget {
   AddedCartItem({this.imagePath, this.itemTitle, this.itemPrice});
@@ -49,9 +47,7 @@ class AddedCartItem extends StatelessWidget {
               children: <Widget>[
                 IconButton(
                   icon: Icon(Icons.delete),
-                  onPressed: () {
-                    
-                  },
+                  onPressed: () {},
                 ),
                 Text(
                   '1',
@@ -59,8 +55,7 @@ class AddedCartItem extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Icon(Icons.add),
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -70,8 +65,6 @@ class AddedCartItem extends StatelessWidget {
     );
   }
 }
-
-
 
 // class AddedCartItem extends StatefulWidget {
 //   AddedCartItem({this.imagePath, this.itemTitle, this.itemPrice});
@@ -129,7 +122,7 @@ class AddedCartItem extends StatelessWidget {
 //                     setState(() {
 //                       counter--;
 //                     });
-                    
+
 //                   },
 //                 ),
 //                 Text(
